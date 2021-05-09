@@ -5,7 +5,7 @@ import org.apache.camel.builder.RouteBuilder;
 public class KafkaConsumerRoute extends RouteBuilder {
     @Override
     public void configure() throws Exception {
-        from("kafka:sighting")
+        from("kafka:camelsightings")
                 .to("log:${body}");
     }
 }
